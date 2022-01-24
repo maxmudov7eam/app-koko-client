@@ -13,9 +13,9 @@ const Services = () => {
             duration: 1700,
         })
         
-        // window.addEventListener('scroll', handScroll);
+        window.addEventListener('scroll', handScroll);
 
-        // return () => window.removeEventListener('scroll', handScroll)
+        return () => window.removeEventListener('scroll', handScroll)
     }, [])
     return (
         <>

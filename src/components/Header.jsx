@@ -1,21 +1,15 @@
 import React, { useEffect, useState } from 'react';
-// import Aos from 'aos';
 const Header = () => {
     const [offsetY, setOffsetY] = useState(0);
 
     const handScroll = () => setOffsetY(window.pageYOffset)
 
-    // useEffect(() => {
-    //     // Aos.init({
-    //     //     once: false,
-    //     //     duration: 1800,
-    //     //     easing: 'ease-in-out'
-    //     // })
+    useEffect(() => {
         
-    //     window.addEventListener('scroll', handScroll);
+        window.addEventListener('scroll', handScroll);
 
-    //     return () => window.removeEventListener('scroll', handScroll)
-    // })
+        return () => window.removeEventListener('scroll', handScroll)
+    })
     return (
         <div className='header'>
             <div className="video">
