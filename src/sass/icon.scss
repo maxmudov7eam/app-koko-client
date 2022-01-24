@@ -1,0 +1,27 @@
+
+.icon {
+    width: 28px;
+    height: 25px;
+    display: inline-block;
+  
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+  
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+  
+    background-color: #fff;
+  
+    &.icon-telegram {
+      mask-image: url("../image/tg.svg");
+      -webkit-mask-image: url("../image/tg.svg");
+      width: 29px;
+    }
+  
+    &.icon-instagram {
+      mask-image: url("../image/ins.svg");
+      -webkit-mask-image: url("../image/ins.svg");
+    }
+  
+  
+  }
