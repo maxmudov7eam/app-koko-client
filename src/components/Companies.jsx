@@ -24,9 +24,26 @@ const Companies = () => {
                             //     items: 2
                             // },
                             0: {
+                                items: 2
+                            },
+                            600: {
+                                items: 4
+                            },
+                            1000: {
+                                items: 5
+                            },
+                            1400: {
                                 items: 7
                             }
-                        }} mouseTracking={true} animationEasingFunction={'linear'} disableButtonsControls={true} touchTracking={true} autoPlay={true} autoPlayInterval={500} disableDotsControls={true} infinite={true} className=''>
+                        }}  
+                            mouseTracking={true} 
+                            animationEasingFunction={'linear'} 
+                            disableButtonsControls={true} 
+                            touchTracking={true} 
+                            autoPlay={true} 
+                            autoPlayInterval={500} 
+                            disableDotsControls={true} 
+                            infinite={true}>
 
 
                             <div className="carouselWrap ">

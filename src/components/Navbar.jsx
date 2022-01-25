@@ -33,7 +33,7 @@ const Navbar = () => {
                             </Link>
                         </div>
 
-                        <div className="col-md-8">
+                        <div className="col-md-8 d-none d-lg-flex">
                             <ul className='d-flex align-items-center justify-content-center'>
                                 <li className={`mr-5 myLi`}><Link className={`myA  ${location.pathname === '/' ? 'navlinkActive' : ''}`} to='/'>{getText('home')}</Link></li>
                                 {/* <li className={`mr-5 myLi`}><Link className={`myA ${location.pathname === '/projects' ? 'navlinkActive' : ''}`} to='/projects'>Projects</Link></li> */}
@@ -53,20 +53,20 @@ const Navbar = () => {
                             </ul>
                         </div>
 
-                        <div className="col-md-2 d-flex align-items-center langWrap">
+                        <div className="col-md-2 d-none d-lg-flex align-items-center langWrap">
                             {localStorage.getItem(LANGUAGE) === 'ru' ?
                                 <>
                                     <div className='d-flex align-items-center uz1' onClick={(e) => changeLanguage('uz')}>
                                         <i><img src="/assets/icon/uz.svg" alt="" /></i>
                                         <b style={{ transform: 'translateY(4px)' }} className='mx-2 d-block'>UZ </b>
                                     </div>
-                                    <div className='d-flex align-items-center ru1' onClick={(e) => changeLanguage('ru')}>
+                                    <div className='d-flex align-items-center ru1' onClick={(e) => changeLanguage('uz')}>
                                         <i><img src="/assets/icon/ru.svg" alt="" /></i>
                                         <b style={{ transform: 'translateY(2px)' }} className='mx-2 d-block'>RU </b>
                                     </div>
                                 </> :
                                 <>
-                                    <div className='d-flex align-items-center uz' onClick={(e) => changeLanguage('uz')}>
+                                    <div className='d-flex align-items-center uz' onClick={(e) => changeLanguage('ru')}>
                                         <i><img src="/assets/icon/uz.svg" alt="" /></i>
                                         <b style={{ transform: 'translateY(4px)' }} className='mx-2 d-block'>UZ </b>
                                     </div>
@@ -81,7 +81,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className={`navbarLine`}></div>
+            <div className={`${location.pathname === '/' ? '' : 'navbarLine'}`}></div>
             {/* || location.pathname === '/web-development' || location.pathname === 'internet-marketing' || location.pathname === 'design' || location.pathname === 'moushen'  */}
         </>
     )

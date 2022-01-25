@@ -1,11 +1,4 @@
-@import "./icon.scss";
-
-// ************************* COLOR ************************
-$backgroundColor: #24252d;
-$colorPink: #bb92e5;
-$colorBlue: #6f73ee;
-$colorGreen: #99d5ae;
-$colorWhite: #fff;
+@import "./secondary.scss";
 
 html {
   // scroll-behavior: smooth;
@@ -33,133 +26,6 @@ body {
   font-family: "Poppins", sans-serif;
   background: #24252d;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    margin-bottom: 0 !important;
-  }
-
-  img {
-    user-select: none;
-  }
-
-  a {
-    text-decoration: none;
-    color: #000;
-    outline: none !important;
-
-    &:hover {
-      text-decoration: none !important;
-      color: #666;
-    }
-  }
-
-  ul,
-  li {
-    list-style: none;
-    margin: 0;
-    padding: 0 !important;
-  }
-
-  .card {
-    background-color: transparent;
-    border: 0;
-    padding: 0;
-
-    .card-body {
-      background-color: transparent;
-      border: 0;
-      padding: 0;
-    }
-  }
-
-  .myBtn {
-    transition: all 0.7s ease-in-out;
-    cursor: pointer;
-    font-weight: 500;
-    position: relative;
-    overflow: hidden;
-    color: $colorBlue;
-    text-transform: uppercase;
-    padding: 10px 30px;
-    margin-top: 20px;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 12px 45px;
-    border: 2px solid $colorBlue;
-    background: transparent;
-    transition: all 0.5s ease-in-out;
-
-    &::after {
-      content: "";
-      position: absolute;
-      background-color: $colorWhite;
-      transform: translateY(100px) rotate(10deg);
-      width: 200%;
-      height: 200%;
-      left: -50px;
-      top: -15px;
-      transition: all 0.5s ease-in-out;
-    }
-
-    &::before {
-      content: "Get started";
-      font-size: 14px;
-      font-weight: 700;
-      position: absolute;
-      font-weight: 700;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.5s ease-in-out;
-      opacity: 0;
-      transform: translateY(10px);
-      color: $backgroundColor;
-    }
-
-    &:hover {
-      border-color: transparent;
-      // transform: translateY(-3px);
-
-      &::after {
-        transform: translateY(0) rotate(10deg);
-      }
-
-      &::before {
-        opacity: 1;
-        z-index: 2;
-        transform: translateY(0);
-      }
-    }
-  }
-
-  .loader {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $backgroundColor;
-    position: fixed;
-    z-index: 999999;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-
-    h5 {
-      font-size: 24px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-  }
-
   .navbarLine {
     padding-top: 100px;
   }
@@ -177,6 +43,7 @@ body {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     user-select: none;
+    // opacity: 0;
 
     .langWrap {
       overflow: hidden;
@@ -340,7 +207,7 @@ body {
   .header {
     position: relative;
     overflow: hidden;
-    height: 85vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -357,7 +224,7 @@ body {
       text-transform: uppercase;
       padding: 10px 30px;
       margin-top: 10px;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 500;
       letter-spacing: 1px;
       padding: 12px 45px;
@@ -366,12 +233,20 @@ body {
       transition: all 0.5s linear;
 
       &::before {
+        font-size: 18px;
+        
+      @media(max-width: 992px) {
         font-size: 16px;
+      }
       }
 
       &:hover {
         border-color: transparent;
         color: $colorBlue;
+      }
+      
+      @media(max-width: 992px) {
+        font-size: 16px;
       }
     }
 
@@ -383,11 +258,16 @@ body {
 
     p {
       font-weight: 500;
-      font-size: 20px;
-      line-height: 26px;
+      font-size: 24px;
+      line-height: 32px;
       color: #c9c9c9;
       width: 85%;
       margin: 25px auto 35px !important;
+
+      @media(max-width: 992px) {
+        font-size: 22px;
+        width: 100%;
+      }
     }
 
     h1 {
@@ -395,22 +275,38 @@ body {
       font-size: 80px;
       line-height: 82px;
       color: $colorBlue;
-      // margin-top: 80px;
+      
+      @media(max-width: 992px) {
+        font-size: 50px;
+        line-height: 60px;
+      }
     }
 
     .video {
       position: absolute;
-      width: 100%;
       left: 0;
       top: 0;
+      width: 100%;
+
+      @media(max-width: 1300px) {
+        width: auto;
+      }
     }
 
     video {
       position: absolute;
       z-index: -1;
-      width: 100%;
       top: 0;
       left: 0;
+      height: 100vh;
+
+      @media(max-width: 992px) {
+        height: 100vh;
+      }
+    }
+
+    @media(max-width: 992px) {
+      height: 100vh;
     }
   }
 
@@ -1290,6 +1186,13 @@ body {
 
   .weInNumber {
     padding: 50px 0;
+
+    .lastCard {
+      @media(max-width: 992px) {
+        justify-content: center !important;
+        text-align: center;
+      }
+    }
     
     .container {
       position: relative;
@@ -1308,11 +1211,20 @@ body {
         right: -200px;
         top: -175px;
         z-index: 1;
+
+        @media(max-width: 992px) {
+          right: 0;
+          z-index: -1;
+        }
       }
 
       .bg3 {
         bottom: -118px;
         right: -193px;
+
+        @media(max-width: 992px) {
+          right: 0;
+        }
       }
 
     }
@@ -1345,6 +1257,10 @@ body {
         margin-bottom: 50px !important;
         font-weight: 600;
         text-align: center;
+
+        @media(max-width: 992px) {
+          font-size: 35px;
+        }
       }
 
       .card {
@@ -1357,6 +1273,10 @@ body {
             color: $colorBlue;
             font-family: 'Comic Sans MS', sans-serif;
             font-weight: 600;
+
+            @media(max-width: 992px) {
+              font-size: 50px;
+            }
           }
 
           h3 {
@@ -1365,6 +1285,10 @@ body {
             font-weight: 400;
           }
         }
+      }
+
+      @media(max-width: 992px) {
+        padding: 50px 15px 30px;
       }
     }
   }
@@ -1385,6 +1309,10 @@ body {
       line-height: 30px;
       width: 55%;
       margin: 15px auto 20px !important;
+
+      @media(max-width: 992px) {
+        width: 100%;
+      }
     }
 
     .card {
@@ -1431,6 +1359,16 @@ body {
         transition: all .4s ease-in-out;
         transform: translate(253px, -104px);
         opacity: 0;
+
+        @media(max-width: 992px) {
+          opacity: 1;
+        }
+      }
+
+      @media(max-width: 992px) {
+        transform: scale(1.05);
+        background: rgba(40, 48, 54, 0.6);
+        backdrop-filter: blur(50px);
       }
 
       &:hover {
@@ -1611,6 +1549,11 @@ body {
       right: 117px;
       border-radius: 50%;
       animation: anim1 3s linear infinite reverse;
+
+      @media(max-width: 600px) {
+        right: 35px;
+        bottom: 75px;
+      }
     }
 
     a {
@@ -1632,7 +1575,12 @@ body {
       img {
         transform: rotate(270deg) scale(1.5);
       }
+
+      @media(max-width: 676px) {
+        right: 35px;
+        bottom: 75px;
       }
+    }
   }
 
   .footer {

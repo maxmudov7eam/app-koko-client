@@ -18,7 +18,7 @@ const WeInNumber = () => {
                     <div data-aos='fade-right' className="col-12">
                         <h1>We are in numbers</h1>
                     </div>
-                    <div data-aos='fade-up' className="col-lg-4">
+                    <div data-aos='fade-up' className="col-lg-4 d-flex align-items-center justify-content-center text-center text-lg-left mb-4 mb-lg-0 d-lg-block">
                         <div className="card">
                             <div className="card-body">
                                 <h2>12+</h2>
@@ -26,7 +26,7 @@ const WeInNumber = () => {
                             </div>
                         </div>
                     </div>
-                    <div data-aos='fade-up' className="col-lg-4">
+                    <div data-aos='fade-up' className="col-lg-4 d-flex align-items-center justify-content-center text-center text-lg-left mb-4 mb-lg-0 d-lg-block">
                         <div className="card">
                             <div className="card-body">
                                 <h2>999+</h2>
@@ -34,7 +34,7 @@ const WeInNumber = () => {
                             </div>
                         </div>
                     </div>
-                    <div data-aos='fade-up' className="col-lg-4 d-flex justify-content-end">
+                    <div data-aos='fade-up' className="col-lg-4 d-flex align-items-center mb-4 mb-lg-0 d-flex justify-content-end lastCard">
                         <div className="card">
                             <div className="card-body">
                                 <h2>32+</h2>
