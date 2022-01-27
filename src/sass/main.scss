@@ -312,7 +312,7 @@ body {
 
   .services {
     user-select: none;
-    padding-top: 100px;
+    padding: 70px 0;
     position: relative;
 
     h4 {
@@ -327,6 +327,7 @@ body {
       transition: 0.5s ease;
       z-index: 1;
       border-radius: 10px;
+      height: 400px;
 
       .card-body {
         i {
@@ -363,6 +364,10 @@ body {
           text-align: center;
           color: $colorGreen
         }
+      }
+
+      &:nth-child(2n + 1) {
+        transform: translateY(-20px)
       }
 
       @media(max-width: 1000px) {

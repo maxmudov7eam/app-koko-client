@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import Aos from 'aos';
 
 const Services = () => {
-    const [offsetY, setOffsetY] = useState(0);
+    // const [offsetY, setOffsetY] = useState(0);
 
-    const handScroll = () => setOffsetY(window.pageYOffset)
+    // const handScroll = () => setOffsetY(window.pageYOffset)
 
     useEffect(() => {
         Aos.init({
@@ -13,9 +13,9 @@ const Services = () => {
             duration: 1700,
         })
         
-        window.addEventListener('scroll', handScroll);
+        // window.addEventListener('scroll', handScroll);
 
-        return () => window.removeEventListener('scroll', handScroll)
+        // return () => window.removeEventListener('scroll', handScroll)
     }, [])
     return (
         <>
@@ -26,8 +26,8 @@ const Services = () => {
                             <h4 data-aos='fade-right'>Our Services</h4>
                         </div>
                     </div>
-                    <div style={{transform: 'translateY(100px)'}} className="d-flex align-items-center">
-                        <div style={{ transform: `translateY(${offsetY * -0.1}px)` }} className="card">
+                    <div className="d-flex align-items-center">
+                        <div className="card">
                             <Link to='/web-development'>
                                 <div className="card-body position-relative">
                                     <i> <img src="/assets/image/card2.png" alt="" className="w-100" /></i>
@@ -37,7 +37,7 @@ const Services = () => {
                             </Link>
                         </div>
 
-                        <div style={{ transform: `translateY(${offsetY * -0.15}px)` }} className="card">
+                        <div className="card">
                             <Link to='/motion'>
                                 <div className="card-body position-relative">
                                     <i> <img src="/assets/image/card3.png" alt="" className="w-100" /></i>
@@ -47,7 +47,7 @@ const Services = () => {
                             </Link>
                         </div>
 
-                        <div style={{ transform: `translateY(${offsetY * -0.2}px)` }} className="card">
+                        <div className="card">
                             <Link to='/internet-marketing'>
                                 <div className="card-body position-relative">
                                     <i> <img src="/assets/image/card1.png" alt="" className="w-100" /></i>
@@ -57,7 +57,7 @@ const Services = () => {
                             </Link>
                         </div>
 
-                        <div style={{ transform: `translateY(${offsetY * -0.25}px)` }} className="card">
+                        <div className="card">
                             <Link to='/design'>
                                 <div className="card-body position-relative">
                                     <i> <img src="/assets/image/card4.png" alt="" className="w-100" /></i>
@@ -71,7 +71,6 @@ const Services = () => {
                 </div>
             </div>
 
-            <div className="servicesLine"></div>
         </>
     )
 }
